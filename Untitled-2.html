@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bombay Medical | Your Trusted Healthcare Partner</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7fbfc;
+    color:#18323b;
+    line-height:1.6;
+}
+
+/* NAVBAR */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    font-weight:800;
+    color:#087f8c;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:#087f8c;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:25px;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#25434b;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#087f8c;
+}
+
+.call-btn{
+    text-decoration:none;
+    background:#087f8c;
+    color:white;
+    padding:11px 18px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#e8f8fa,#ffffff);
+}
+
+.hero-container{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:70px 20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.1;
+    margin-bottom:20px;
+    color:#123c45;
+}
+
+.hero h1 span{
+    color:#087f8c;
+}
+
+.hero p{
+    font-size:19px;
+    color:#60777d;
+    max-width:550px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding:14px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-block;
+}
+
+.primary-btn{
+    background:#087f8c;
+    color:white;
+}
+
+.secondary-btn{
+    border:2px solid #087f8c;
+    color:#087f8c;
+}
+
+.hero-card{
+    background:white;
+    border-radius:35px;
+    padding:55px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(8,127,140,.15);
+}
+
+.medical-cross{
+    width:180px;
+    height:180px;
+    margin:auto;
+    border-radius:50%;
+    background:#e5f7f8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#087f8c;
+    font-size:100px;
+    font-weight:bold;
+}
+
+.hero-card h2{
+    margin-top:25px;
+}
+
+/* TRUST */
+.trust{
+    max-width:1100px;
+    margin:-45px auto 60px;
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:0 20px;
+}
+
+.trust-box{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.trust-box h3{
+    color:#087f8c;
+    font-size:28px;
+}
+
+/* GENERAL */
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:38px;
+    color:#173e47;
+}
+
+.section-title p{
+    color:#71868b;
+    margin-top:8px;
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-box{
+    background:#e8f7f8;
+    padding:45px;
+    border-radius:30px;
+}
+
+.about-box .big-cross{
+    font-size:130px;
+    text-align:center;
+    color:#087f8c;
+}
+
+.about h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.about p{
+    color:#63777c;
+}
+
+/* SERVICES */
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.service{
+    background:white;
+    padding:30px 20px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-8px);
+}
+
+.service-icon{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.service h3{
+    margin-bottom:8px;
+}
+
+.service p{
+    color:#71868b;
+    font-size:14px;
+}
+
+/* PRODUCTS */
+.search{
+    max-width:550px;
+    margin:0 auto 35px;
+    position:relative;
+}
+
+.search input{
+    width:100%;
+    padding:16px 20px;
+    border:1px solid #d6e4e6;
+    border-radius:30px;
+    outline:none;
+    font-size:16px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.product{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    border:1px solid #e5eeee;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.product-image{
+    height:150px;
+    background:#edf9fa;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:65px;
+    margin-bottom:18px;
+}
+
+.product h3{
+    margin-bottom:5px;
+}
+
+.product p{
+    color:#71868b;
+    font-size:14px;
+}
+
+.price{
+    color:#087f8c;
+    font-weight:bold;
+    font-size:18px;
+    margin-top:10px;
+}
+
+/* WHY */
+.why{
+    background:#edf8f9;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+}
+
+.why-card span{
+    font-size:35px;
+}
+
+/* STEPS */
+.steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.step{
+    text-align:center;
+}
+
+.step-number{
+    width:60px;
+    height:60px;
+    margin:0 auto 15px;
+    background:#087f8c;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:23px;
+    font-weight:bold;
+}
+
+/* REVIEWS */
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.review{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.stars{
+    color:#f2b84b;
+    margin-bottom:12px;
+}
+
+/* CONTACT */
+.contact{
+    background:#eaf7f8;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info{
+    background:#087f8c;
+    color:white;
+    padding:40px;
+    border-radius:25px;
+}
+
+.contact-info h2{
+    margin-bottom:20px;
+}
+
+.contact-item{
+    margin:18px 0;
+}
+
+form{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #d5e2e4;
+    border-radius:10px;
+    outline:none;
+}
+
+form textarea{
+    height:120px;
+    resize:none;
+}
+
+form button{
+    width:100%;
+    border:0;
+    padding:14px;
+    border-radius:25px;
+    background:#087f8c;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    background:#123c45;
+    color:white;
+    padding:45px 20px 20px;
+}
+
+.footer-grid{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer a{
+    color:#d6edef;
+    text-decoration:none;
+    display:block;
+    margin:7px 0;
+}
+
+.copyright{
+    max-width:1150px;
+    margin:30px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.2);
+    text-align:center;
+    color:#bdd1d4;
+    font-size:14px;
+}
+
+/* FLOATING BUTTON */
+.float-btn{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    background:#087f8c;
+    color:white;
+    padding:15px 20px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+    nav{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        right:0;
+        background:white;
+        flex-direction:column;
+        padding:25px;
+        text-align:center;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .call-btn{
+        display:none;
+    }
+
+    .hero-container,
+    .about,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid,
+    .reviews{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        min-height:auto;
+    }
+
+    .hero-container{
+        padding:55px 20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .trust{
+        grid-template-columns:1fr;
+        margin-top:30px;
+    }
+
+    .services-grid,
+    .product-grid,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    section{
+        padding:60px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">✚</div>
+            Bombay Medical
+        </div>
+
+        <div class="menu" onclick="toggleMenu()">☰</div>
+
+        <nav id="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="call-btn" href="tel:+919876543210">
+            ☎ Call Now
+        </a>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <div>
+            <h1>
+                Your Trusted
+                <span>Healthcare Partner</span>
+            </h1>
+
+            <p>
+                Welcome to Bombay Medical. Find everyday healthcare
+                essentials, medicines and pharmacy services with
+                friendly and reliable assistance.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#products" class="primary-btn">
+                    Explore Products
+                </a>
+
+                <a href="#contact" class="secondary-btn">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+
+            <div class="medical-cross">+</div>
+
+            <h2>Bombay Medical</h2>
+
+            <p>
+                Quality healthcare products.
+                Trusted service.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRUST -->
+<div class="trust">
+
+    <div class="trust-box">
+        <h3>10+</h3>
+        <p>Years of Trust</p>
+    </div>
+
+    <div class="trust-box">
+        <h3>1000+</h3>
+        <p>Healthcare Products</p>
+    </div>
+
+    <div class="trust-box">
+        <h3>24/7</h3>
+        <p>Customer Assistance</p>
+    </div>
+
+</div>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <div class="container about">
+
+        <div class="about-box">
+            <div class="big-cross">✚</div>
+        </div>
+
+        <div>
+            <h2>About Bombay Medical</h2>
+
+            <p>
+                Bombay Medical is a modern community pharmacy concept
+                focused on making everyday healthcare shopping simple
+                and convenient.
+            </p>
+
+            <br>
+
+            <p>
+                We offer a wide range of healthcare essentials,
+                personal care products, first-aid supplies and
+                other pharmacy-related products.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Our goal:</strong> reliable products,
+                helpful service and a better customer experience.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Healthcare support for everyday needs</p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service">
+                <div class="service-icon">💊</div>
+                <h3>Prescription Medicines</h3>
+                <p>Prescription medicines supplied according to applicable requirements.</p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🩹</div>
+                <h3>First Aid</h3>
+                <p>Everyday first-aid and basic healthcare essentials.</p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🍼</div>
+                <h3>Baby Care</h3>
+                <p>Selected baby-care and hygiene products.</p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🩺</div>
+                <h3>Medical Devices</h3>
+                <p>Selected home healthcare and monitoring devices.</p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🌿</div>
+                <h3>Wellness</h3>
+                <p>General wellness and personal healthcare products.</p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🧴</div>
+                <h3>Personal Care</h3>
+                <p>Personal hygiene and everyday care products.</p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">📦</div>
+                <h3>Order Assistance</h3>
+                <p>Contact us to check product availability.</p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🚚</div>
+                <h3>Home Delivery</h3>
+                <p>Demo service — availability depends on location.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section id="products">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Popular Categories</h2>
+            <p>Sample products for demonstration</p>
+        </div>
+
+        <div class="search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔎 Search products..."
+                onkeyup="searchProducts()"
+            >
+        </div>
+
+        <div class="product-grid" id="productGrid">
+
+            <div class="product">
+                <div class="product-image">💊</div>
+                <h3>General Medicines</h3>
+                <p>Everyday pharmacy products.</p>
+                <div class="price">From ₹50</div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">🩹</div>
+                <h3>First Aid Kit</h3>
+                <p>Basic first-aid essentials.</p>
+                <div class="price">₹299</div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">🩺</div>
+                <h3>Digital Thermometer</h3>
+                <p>Home temperature monitoring device.</p>
+                <div class="price">₹199</div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">🧴</div>
+                <h3>Personal Care</h3>
+                <p>Everyday hygiene products.</p>
+                <div class="price">From ₹99</div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">🍼</div>
+                <h3>Baby Care</h3>
+                <p>Selected baby-care essentials.</p>
+                <div class="price">From ₹120</div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">🌿</div>
+                <h3>Wellness Products</h3>
+                <p>General wellness essentials.</p>
+                <div class="price">From ₹150</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Why Choose Bombay Medical?</h2>
+            <p>Simple, reliable and customer-focused</p>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <span>✓</span>
+                <h3>Genuine Products</h3>
+                <p>Focus on sourcing products through appropriate channels.</p>
+            </div>
+
+            <div class="why-card">
+                <span>🤝</span>
+                <h3>Friendly Service</h3>
+                <p>Helpful assistance for your everyday pharmacy needs.</p>
+            </div>
+
+            <div class="why-card">
+                <span>📍</span>
+                <h3>Convenient</h3>
+                <p>Easy access to healthcare essentials and support.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW TO ORDER -->
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>How To Order</h2>
+            <p>Simple three-step process</p>
+        </div>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Send Your Request</h3>
+                <p>Contact Bombay Medical with your product request.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Confirm Availability</h3>
+                <p>Our team confirms availability and applicable requirements.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Collect / Receive</h3>
+                <p>Collect your order or use delivery where available.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Customer Reviews</h2>
+            <p>Sample testimonials for demonstration</p>
+        </div>
+
+        <div class="reviews">
+
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "Very convenient and the staff was helpful."
+                </p>
+                <br>
+                <strong>Rahul S.</strong>
+            </div>
+
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "Clean website experience and easy to find products."
+                </p>
+                <br>
+                <strong>Ayesha K.</strong>
+            </div>
+
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "Good customer service and a useful range of products."
+                </p>
+                <br>
+                <strong>Imran M.</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Contact Bombay Medical</h2>
+            <p>We're here to help</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <h2>Get In Touch</h2>
+
+                <div class="contact-item">
+                    📍 <strong>Address</strong><br>
+                    123 Healthcare Street,<br>
+                    Mumbai, Maharashtra 400001
+                </div>
+
+                <div class="contact-item">
+                    📞 <strong>Phone</strong><br>
+                    +91 98765 43210
+                </div>
+
+                <div class="contact-item">
+                    ✉️ <strong>Email</strong><br>
+                    hello@bombaymedical.example
+                </div>
+
+                <div class="contact-item">
+                    🕒 <strong>Opening Hours</strong><br>
+                    Monday – Sunday<br>
+                    8:00 AM – 10:00 PM
+                </div>
+
+            </div>
+
+
+            <form onsubmit="submitForm(event)">
+
+                <h2>Send Us a Message</h2>
+
+                <br>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="How can we help?"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>✚ Bombay Medical</h3>
+
+            <p>
+                Your trusted healthcare partner for everyday
+                pharmacy and healthcare essentials.
+            </p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+
+            <p>📞 +91 98765 43210</p>
+            <p>✉️ hello@bombaymedical.example</p>
+            <p>📍 Mumbai, Maharashtra</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Bombay Medical. All rights reserved.
+        <br>
+        Demo website. Product availability, pricing and services may vary.
+    </div>
+
+</footer>
+
+
+<!-- FLOATING CONTACT -->
+<a
+    href="https://wa.me/919876543210"
+    class="float-btn"
+    target="_blank"
+>
+    💬 WhatsApp
+</a>
+
+
+<script>
+
+/* MOBILE MENU */
+function toggleMenu(){
+
+    const nav = document.getElementById("nav");
+
+    nav.classList.toggle("active");
+
+}
+
+
+/* PRODUCT SEARCH */
+function searchProducts(){
+
+    const input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const products =
+        document.querySelectorAll(".product");
+
+    products.forEach(function(product){
+
+        const text =
+            product.innerText.toLowerCase();
+
+        if(text.includes(input)){
+            product.style.display = "block";
+        }else{
+            product.style.display = "none";
+        }
+
+    });
+
+}
+
+
+/* CONTACT FORM */
+function submitForm(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    alert(
+        "Thank you, " +
+        name +
+        "! Your message has been received in this demo."
+    );
+
+    event.target.reset();
+
+}
+
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+document.querySelectorAll("nav a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        document.getElementById("nav")
+        .classList.remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
